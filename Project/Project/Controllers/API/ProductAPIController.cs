@@ -58,6 +58,7 @@ namespace Project.Controllers.API
         }
         //刪除
         [HttpDelete]
+        [Route("/delete/data")]
         public void DeleteProduct([FromQuery(Name="id")]int id)
         {
            var Info= _ProductDb.Products.Where(p => p.ProductId == id).FirstOrDefault<Product>();
